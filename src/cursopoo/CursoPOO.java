@@ -1,10 +1,11 @@
-
 package cursopoo;
 
+import java.util.Scanner;
 
 public class CursoPOO {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         /*
         //instancia/cria um objeto
         Caneta c1 = new Caneta(); //nome da classe na frente
@@ -16,18 +17,20 @@ public class CursoPOO {
         c1.tampar();
         c1.rabiscar();
         c1.status();
-        */
-        Caneta c2 = new Caneta();
-        c2.cor= "Preto";
-        c2.ponta = 0.7f;
-        c2.carga = 95;
-        c2.modelo = "Topper";
-        c2.tampada = true;
-        c2.rabiscar();
-        c2.status();
-        c2.destampar();
-        c2.rabiscar();
-        
+         */
+        Garrafa g1 = new Garrafa();
+
+        g1.marca = "Bonafonte";
+        System.out.println("Digite o nivel da sua garrafa: ");
+        int nivel = input.nextInt();
+        g1.tampar = true;
+        g1.encher(nivel);
+
+        Garrafa g2 = new Garrafa();
+        g2.marca = "Legitima";
+        g2.nivel = 100;
+        g2.encher(2);
+
     }
-    
+
 }
