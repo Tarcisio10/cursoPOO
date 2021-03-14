@@ -4,14 +4,14 @@ package cursopoo;
 public class Caneta {
 
     //atributos
-    String modelo;
-    String cor;
-    float ponta;
-    int carga;
-    boolean tampada;
+    public String modelo;
+    public String cor;
+    private float ponta;
+    protected int carga;
+    private boolean tampada;
 
     //métodos 
-    void status() {
+    public void status() {
         System.out.println("Modelo:" + this.modelo);
         System.out.println("Cor: " + this.cor);
         System.out.println("Ponta: " + this.ponta);
@@ -19,19 +19,19 @@ public class Caneta {
         System.out.println("Esta tampada ? " + this.tampada);
     }
 
-    void rabiscar() {
-        if (this.tampada /*ou tampada == true*/ == true) {
+    public void rabiscar() {
+        if (this.tampada /*ou tampada*/ == true) {
             System.out.println("ERRO, nao posso rabiscar");
         } else {
             System.out.println("Posso rabiscar");
         }
     }
 
-    void tampar() {
+    public void tampar() {
         this.tampada = true;
     }
 
-    void destampar() {
+    public void destampar() {
         this.tampada = false;
     }
 
