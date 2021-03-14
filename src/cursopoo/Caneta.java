@@ -4,35 +4,53 @@ package cursopoo;
 public class Caneta {
 
     //atributos
-    public String modelo;
-    public String cor;
+    private String modelo , cor;
+    //private String cor;
     private float ponta;
-    protected int carga;
     private boolean tampada;
 
-    //métodos 
+    public Caneta(String m, float p, String c) {
+        this.modelo = m;
+        this.ponta = p;
+        this.cor = c;
+        this.tampada = true;
+        System.out.println("Caneta criada com sucesso!");
+        System.out.println("modelo:" + this.modelo);
+        System.out.println("Ponta:" + this.ponta);
+        System.out.println("Cor:" + this.cor);
+        System.out.println("Tampada:" + this.tampada);
+
+    }
+
     public void status() {
-        System.out.println("Modelo:" + this.modelo);
-        System.out.println("Cor: " + this.cor);
-        System.out.println("Ponta: " + this.ponta);
-        System.out.println("Carga :" + this.carga);
-        System.out.println("Esta tampada ? " + this.tampada);
+        System.out.println(this.tampada);
     }
 
-    public void rabiscar() {
-        if (this.tampada /*ou tampada*/ == true) {
-            System.out.println("ERRO, nao posso rabiscar");
-        } else {
-            System.out.println("Posso rabiscar");
-        }
+    public String getModelo() {
+        return modelo;
     }
 
-    public void tampar() {
+    public void setModelo(String m) {
+        this.modelo = m;
+    }
+
+    public float getPonta() {
+        return ponta;
+    }
+
+    public void setPonta(float p) {
+        this.ponta = p;
+    }
+
+    public void setTampar() {
         this.tampada = true;
     }
 
-    public void destampar() {
+    public void setDestampar() {
         this.tampada = false;
     }
 
+    public String setCor(String c) {
+        return this.cor = c;
+    }
 }
