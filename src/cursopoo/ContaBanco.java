@@ -8,14 +8,15 @@ public class ContaBanco {
     private float saldo;
     private boolean status;
 
-    public ContaBanco(String tC) {
+    public ContaBanco(String tC, int numConta) {
         this.setStatus(true);
         //setTipoConta(tC);
         //abrirConta(tp);
         this.setTipoConta(tC);
+        this.setNumConta(numConta);
         System.out.println("Status:" + this.status);
         System.out.println("TIPO DE CONTA:" + this.tipoConta);
-        System.out.println("NUMERO DA CONTA:" + getNumConta());
+        System.out.println("NUMERO DA CONTA:" + this.numConta);
         System.out.println("SALDO: " + getSaldo());
     }
 
