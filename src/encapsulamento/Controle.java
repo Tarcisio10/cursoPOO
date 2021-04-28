@@ -6,6 +6,7 @@ public class Controle {
         c.ligar();
         c.abrirMenu();
         c.fecharMenu();
+	c.desligar():
     }
     
 }

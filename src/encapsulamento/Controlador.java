@@ -1,7 +1,6 @@
 package encapsulamento;
 
 public interface Controlador {
-
     public void ligar();
 
     public abstract void desligar();

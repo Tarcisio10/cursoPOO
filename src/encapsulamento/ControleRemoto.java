@@ -7,7 +7,7 @@ public class ControleRemoto implements Controlador {
     private boolean tocando;
 
     public ControleRemoto() {
-        this.volume = 50;
+        this.volume = 55;
         this.ligado = true;
         this.tocando = false;
     }
