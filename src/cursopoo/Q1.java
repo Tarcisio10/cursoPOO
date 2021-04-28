@@ -17,5 +17,6 @@ public class Q1 {
             
         }
         System.out.println(i);
+        System.out.println("OI");
     }
 }
