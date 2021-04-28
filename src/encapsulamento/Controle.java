@@ -5,6 +5,7 @@ public class Controle {
         ControleRemoto  c = new ControleRemoto();
         c.ligar();
         c.abrirMenu();
+        c.fecharMenu();
     }
     
 }
