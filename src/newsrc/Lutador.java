@@ -14,28 +14,37 @@ public class Lutador {
     private String nome;
     private String nacionalidade;
     private int idade;
-    private double altura;
+    private float altura;
     private float peso;
     private String categoria;
     private int vitorias, derrotas, empates;
 
-    public Lutador() {
-        this.vitorias = 0;
-        this.derrotas = 0;
-        this.empates = 0;
-        System.out.println(this.vitorias + "x" + this.empates + "x" + this.derrotas);
-
+    public Lutador(String no, String na, int id, float al, float p, int wins, int loses, int draws) {
+        this.nome = no;
+        this.nacionalidade = na;
+        this.idade = id;
+        this.altura = al;
+        this.peso = p;
+        this.vitorias = wins;
+        this.derrotas = loses;
+        this.empates = draws;
     }
 
-    public static void apresentar() {
-        System.out.println();
+    public void apresentar() {
+        System.out.println(this.getNome());
+        System.out.println(this.getNacionalidade());
+        System.out.println(this.getIdade());
+        System.out.println(this.getAltura());
+        System.out.println(this.getPeso());
     }
 
-    public static void status() {
-
+    public void status() {
+        System.out.println(this.getCategoria());
+        System.out.println(this.getVitorias()+"x"+this.getEmpates()+""+this.getDerrotas());
     }
 
-    public static void ganharLuta() {
+    public void ganharLuta() {
+        this.setVitorias(this.getVitorias() + 1);
 
     }
 
@@ -71,7 +80,7 @@ public class Lutador {
         this.idade = idade;
     }
 
-    public double getAltura() {
+    public float getAltura() {
         return altura;
     }
 
@@ -80,19 +89,24 @@ public class Lutador {
     }
 
     public float getPeso() {
+
         return peso;
+
     }
 
     public void setPeso(float peso) {
         this.peso = peso;
+        this.setCategoria();
     }
 
     public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    private void setCategoria() {
+        if (peso >= 50) {
+            categoria = setCategoria("Invalido");
+        }
     }
 
     public int getVitorias() {
