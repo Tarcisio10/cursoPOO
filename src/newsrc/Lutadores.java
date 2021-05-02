@@ -12,6 +12,9 @@ package newsrc;
 public class Lutadores {
     public static void main(String[] args) {
         Lutador l = new Lutador();
+        l.setNome("Luiz");
+        l.setAltura(1.9);
+        l.setPeso(78);
     }
     
 }

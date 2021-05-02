@@ -14,7 +14,7 @@ public class Lutador {
     private String nome;
     private String nacionalidade;
     private int idade;
-    private float altura;
+    private double altura;
     private float peso;
     private String categoria;
     private int vitorias, derrotas, empates;
@@ -23,11 +23,12 @@ public class Lutador {
         this.vitorias = 0;
         this.derrotas = 0;
         this.empates = 0;
-        apresentar();
+        System.out.println(this.vitorias + "x" + this.empates + "x" + this.derrotas);
+
     }
 
-    public static void apresentar(String nome, String nacionalidade, int vitorias,int derrotas, int empates) {
-        System.out.println(th);
+    public static void apresentar() {
+        System.out.println();
     }
 
     public static void status() {
@@ -70,7 +71,7 @@ public class Lutador {
         this.idade = idade;
     }
 
-    public float getAltura() {
+    public double getAltura() {
         return altura;
     }
 
